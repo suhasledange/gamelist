@@ -7,7 +7,7 @@ const GameListProvider = ({ children }) => {
   const [page, setPage] = useState(1); 
   const [pageSize, setPageSize] = useState(10); 
   const [nameFilter, setNameFilter] = useState(''); 
-  const [sortField, setSortField] = useState('releaseDate'); 
+  const [sortField, setSortField] = useState('firstReleaseDate'); 
   const [sortOrder, setSortOrder] = useState('asc');
 
   const fetchGameData = async () => {
@@ -16,8 +16,8 @@ const GameListProvider = ({ children }) => {
         params: {
           'pagination[page]': page,
           'pagination[pageSize]': pageSize,
-          'filters[name][$containsi]': nameFilter,
-          '_sort': `${sortField}:${sortOrder}`,
+          [`filters[name][$containsi]`]: nameFilter,
+          [`sort[${sortField}]`]: sortOrder,
         },
       });
       setGameData(response.data.data); 

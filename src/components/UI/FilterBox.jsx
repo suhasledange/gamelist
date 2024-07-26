@@ -75,8 +75,8 @@ const FilterBox = () => {
               value={selectedOption}
               onChange={handleSelectChange}
             >
-              <option value="releaseDate">Release Date</option>
-              <option value="score">Score</option>
+              <option value="firstReleaseDate">Release Date</option>
+              <option value="rating">Score</option>
               <option value="name">Name</option>
             </select>
           </div>
