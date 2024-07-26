@@ -9,7 +9,6 @@ const VideoGames = () => {
 
     const {gameData} = useContext(GameListContext)
 
-    console.log(gameData)
 
   return (
     <div className='mt-8'>
