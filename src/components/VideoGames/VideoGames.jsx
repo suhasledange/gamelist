@@ -11,7 +11,7 @@ const VideoGames = () => {
 
 
   return (
-    <div className='mt-8'>
+    <div className='mt-8 '>
         <Container className="flex gap-8 md:flex-row flex-col text-white justify-center">
             <div className='flex-[0.3]'>
                     <FilterBox/>
